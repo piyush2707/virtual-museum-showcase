@@ -14,7 +14,7 @@ An immersive virtual museum landing page built using HTML, CSS, and JavaScript. 
 - JavaScript (Vanilla)
 
 ## 🌐 Live Demo
-[GitHub Pages Link](#) <!-- Add your link after deployment -->
+[GitHub Pages Link](#) <!https://piyush2707.github.io/virtual-museum-showcase/#contact >
 
 ## 📬 Connect with Me
 - Instagram: [@withpiyushhz](https://www.instagram.com/withpiyushhz?igsh=bm9ubHJ5cWF2c2tw)
