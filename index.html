@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Museum Showcase</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #101820;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 20px 40px;
+      background: #1a1f2b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #ffcc00;
+    }
+    nav a {
+      margin-left: 20px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .hero {
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ffcc00;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .gallery {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .art {
+      background: #1a1f2b;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s;
+    }
+    .art:hover {
+      transform: translateY(-5px);
+    }
+    .art img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .art h3 {
+      margin: 15px 0 10px;
+      color: #ffcc00;
+    }
+    .art p {
+      color: #aaa;
+    }
+
+    footer {
+      padding: 30px 20px;
+      text-align: center;
+      background: #1a1f2b;
+      color: #999;
+    }
+    .socials a {
+      color: #ffcc00;
+      margin: 0 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Virtual Museum</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Explore Timeless Art in a Digital Space</h2>
+    <p>Step into a virtual museum experience like never before — curated by <strong>Piyush Joshi</strong></p>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="art">
+      <img src="https://images.unsplash.com/photo-1549887534-164d0ef63a3b?auto=format&fit=crop&w=800&q=80" alt="Art 1">
+      <h3>The Golden Age</h3>
+      <p>18th Century Masterpiece showcasing the glory of past civilizations.</p>
+    </div>
+    <div class="art">
+      <img src="https://images.unsplash.com/photo-1602524811080-9430c2c0b69b?auto=format&fit=crop&w=800&q=80" alt="Art 2">
+      <h3>Digital Renaissance</h3>
+      <p>Modern fusion of technology and art expression.</p>
+    </div>
+    <div class="art">
+      <img src="https://images.unsplash.com/photo-1567598508481-6595db0c8d31?auto=format&fit=crop&w=800&q=80" alt="Art 3">
+      <h3>Celestial Canvas</h3>
+      <p>Inspired by space and human imagination of the cosmos.</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Designed by Piyush Joshi</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/withpiyushhz?igsh=bm9ubHJ5cWF2c2tw" target="_blank">Instagram</a> |
+      <a href="https://www.linkedin.com/in/piyush-joshi-4aa81a265" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    // Simple entrance animation on scroll
+    const arts = document.querySelectorAll('.art');
+    window.addEventListener('scroll', () => {
+      arts.forEach(art => {
+        const top = art.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          art.style.opacity = 1;
+          art.style.transform = 'translateY(0)';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
